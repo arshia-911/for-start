@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #layout{
+            border: 1px solid red;
+            width: 543px;
+            height: 600px;
+        } 
+        #box{
+            width: 250px;
+            height: 110px;
+            border: 1px solid orange;
+            float: left;
+            margin: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 25px ;
+            background-color: rgb(216, 199, 49);
+            transition-duration: 1s;
+            
+        }
+        #loading{
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            margin-top: 450px;
+            margin-left: 240px;
+            border-radius: 10px;
+            animation:Move 4s ease infinite ;
+
+
+        }
+        @keyframes Move{
+            0%{}
+            25%{transform: translateX(50px);}
+            50%{transform: translateY(50px) translateX(50px);}
+            75%{transform: translateX(-50px)translateY(50px) translateX(50px);}
+            100%{transform:  translateY(-50px) translateX(-50px) translateY(50px) translateX(50px);}
+            
+
+        }
+    #box:hover{
+        background-color: rgb(73, 189, 50);
+        transform: translateX(5px) translateY(5px);
+    }
+        a{
+            color: coral;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <div id="box">arshia card<br>age:15<br><a href="">see more</a></div>
+        <div id="box">bardia card<br>age:9<br><a href="">see more</a></div>
+        <div id="box">ali card<br>age:19<br><a href="">see more</a></div>
+        <div id="box">reza card<br>age:21<br><a href="">see more</a></div>
+        <div id="loading"></div>
+      
+    </div>
+</body>
+</html>
