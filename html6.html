@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- متریال  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Document</title>
     <style>
-        #layout{
+        #layout {
             border: 1px solid red;
-            width: 543px;
-            height: 600px;
-        } 
-        #box{
+            width: 414px;
+            height: 680px;
+        }
+        #box {
             width: 250px;
             height: 110px;
             border: 1px solid orange;
@@ -18,52 +21,80 @@
             margin: 10px;
             box-sizing: border-box;
             text-align: center;
-            font-size: 25px ;
-            background-color: rgb(216, 199, 49);
+            font-size: 25px;
+            background: #e0e0e0;
             transition-duration: 1s;
-            
+            border-radius: 35px;
+            box-shadow: 15px 15px 30px #bebebe;
         }
-        #loading{
+        #loading {
             width: 20px;
             height: 20px;
             background-color: blue;
-            margin-top: 450px;
-            margin-left: 240px;
+            margin-top: 15px;
+            margin-left: 265px;
             border-radius: 10px;
-            animation:Move 4s ease infinite ;
-
-
+            animation: Move 4s ease infinite; 
         }
-        @keyframes Move{
-            0%{}
-            25%{transform: translateX(50px);}
-            50%{transform: translateY(50px) translateX(50px);}
-            75%{transform: translateX(-50px)translateY(50px) translateX(50px);}
-            100%{transform:  translateY(-50px) translateX(-50px) translateY(50px) translateX(50px);}
-            
+        @keyframes Move {
+            0% {}
 
+            25% {
+                transform: translateY(500px);
+            }
+
+            50% {
+                transform: translateX(-265px) translateY(500px);
+            }
+
+            75% {
+                transform: translateX(265px)translateX(-265px) translateY(500px);
+            }
+
+            100% {
+                transform: translateY(-50px) translateX(-50px) translateY(50px) translateX(50px);
+            }
         }
-    #box:hover{
-        background-color: rgb(73, 189, 50);
-        transform: translateX(5px) translateY(5px);
-    }
-        a{
+        #box:hover {
+            background-color: rgb(73, 189, 50);
+            transform: translateX(5px) translateY(5px);
+        }
+        a {
             color: coral;
         }
-
-
-
     </style>
 </head>
+<!-- ------------------------------------------------------------کد های سایت متریال----------------------------------------------------------------------------- -->
 <body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">سایت</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+    </ul>
+    <!-- ------------------------------------------------------------کد های خودم------------------------------------------------------------------------ -->
     <div id="layout">
         <div id="box">arshia card<br>age:15<br><a href="">see more</a></div>
         <div id="box">bardia card<br>age:9<br><a href="">see more</a></div>
         <div id="box">ali card<br>age:19<br><a href="">see more</a></div>
         <div id="box">reza card<br>age:21<br><a href="">see more</a></div>
         <div id="loading"></div>
-        <div id="box">reza card<br>age:21<br><a href="">see more</a></div>
-      
+        <i class="material-icons">fingerprint</i>
     </div>
+    <!-- متریال -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 </html>
